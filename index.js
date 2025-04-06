@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const app = express();
+const PORT = 3000;
 
 const VIDEO_DIR = path.join(__dirname, 'data', 'youtok', 'vids');
 const THUMB_DIR = path.join(__dirname, 'data', 'youtok', 'thumbs');
@@ -216,7 +217,10 @@ app.get('/youtok', (req, res) => {
 app.use('/', express.static(path.join(__dirname, 'public/Homepage')));
 app.use('/Linktree', express.static(path.join(__dirname, 'public/Linktree')));
 app.use('/magnum', express.static(path.join(__dirname, 'public/Magnum')));
+app.use('/wait' , express.static(path.join(__dirname, 'public/Mas Important')));
+app.use('/secret', express.static(path.join(__dirname, 'public/secret')));
+app.use('/surprise', express.static(path.join(__dirname, 'public/surprise')));
 
-app.listen(6969, () => {
-  console.log(`Server läuft unter: http://localhost:6969/`);
+app.listen(PORT, () => {
+  console.log(`Server läuft unter: http://localhost:${PORT}/`);
 });
