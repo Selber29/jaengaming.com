@@ -214,12 +214,7 @@ app.get('/youtok', (req, res) => {
   `);
 });
 
-app.use('/', express.static(path.join(__dirname, 'public/Homepage')));
-app.use('/Linktree', express.static(path.join(__dirname, 'public/Linktree')));
-app.use('/magnum', express.static(path.join(__dirname, 'public/Magnum')));
-app.use('/wait' , express.static(path.join(__dirname, 'public/Mas Important')));
-app.use('/secret', express.static(path.join(__dirname, 'public/secret')));
-app.use('/surprise', express.static(path.join(__dirname, 'public/surprise')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
   console.log(`Server läuft unter: http://localhost:${PORT}/`);

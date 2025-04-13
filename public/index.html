@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+      background: #ffffff;
+      color: #000000;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    body.dark {
+        background: #000000;
+        color: #ffffff;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .dark img {
+        filter: invert();
+    }
+
+    .chants {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: aqua;
+    }
+</style>
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in progress</title>
+</head>
+<body>
+    <button onclick="switchTheme()" class="chants"></button>
+    <h1>Work in progress</h1>
+    <img src="worka1.gif" alt="GIF Image" width="200" height="200">
+    <img src="worka2.gif" alt="GIF Image" width="200" height="200">
+    <img src="worka3.gif" alt="GIF Image" width="200" height="200">
+</body>
+<script>
+    let isDark = false;
+
+    setInterval(() => {
+        // get random character from ascii
+        const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:',.<>?`~";
+        const wadafaq = Array.from({length: 10}, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+        document.querySelector('.chants').innerText = wadafaq;
+    }, 30);
+
+    // Check if the user has a preference for dark mode
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    if (darkModeMediaQuery.matches) {
+        isDark = true;
+        document.body.classList.add('dark');
+    }
+
+    function switchTheme() {
+        isDark = !isDark;
+        if (isDark) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    }
+</script>
+</html>
