@@ -1,148 +1,77 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>✖ ACCESS DENIED ✖</title>
-  <link rel="stylesheet" href="https://unpkg.com/7.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
+<html lang="en">
+<style>
     body {
-      background: url('bg.webp') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Share Tech Mono', monospace;
-      color: #ff2a2a;
-      text-shadow: 0 0 3px #000, 0 0 12px #ff0000aa;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: url('Normal Select.cur'), auto;
-      overflow: hidden;
-    }
-
-    .window {
-      width: 480px;
-      background-color: rgba(20, 0, 0, 0.9);
-      border-radius: 6px;
-      box-shadow: 0 0 24px #ff0000aa;
-    }
-
-    .pfp {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 1rem auto;
-      display: block;
-      border: 3px solid #ff0000;
-      box-shadow: 0 0 8px #ff0000cc;
-    }
-
-    h1 {
+      background: #ffffff;
+      color: #000000;
+      font-family: 'Arial', sans-serif;
       text-align: center;
-      font-size: 1.5rem;
-      animation: flicker 4s infinite;
-      margin: 0.5rem 0;
+    }
+    body.dark {
+        background: #000000;
+        color: #ffffff;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 
-    p {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      color: #ff2a2a;
-      opacity: 1;
+    .dark img {
+        filter: invert();
     }
 
-    .links {
-      padding: 0 1rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
+    .chants {
+        font-family: 'Courier New', Courier, monospace;
     }
 
-    .btn {
-      background-color: #1a0000;
-      border: 1px solid #ff0000;
-      padding: 10px;
-      border-radius: 4px;
-      color: #ff3333;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: url('Link Select.cur'), pointer;
-      font-family: 'Share Tech Mono', monospace;
-      box-shadow: 0 0 6px #ff000033;
+    button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: aqua;
     }
-
-    .btn:hover {
-      background-color: #330000;
-      box-shadow: 0 0 10px #ff0000cc;
-    }
-
-    @keyframes flicker {
-      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
-      20%, 24%, 55% { opacity: 0.4; }
-    }
-
-    .title-bar-text {
-      color: #ff4444;
-      text-shadow: 0 0 4px #ff0000;
-    }
-
-    .title-bar {
-      background: linear-gradient(to right, #2b0000, #400000);
-    }
-
-    @keyframes text-shake {
-      0% { transform: translate(0px, 0px) rotate(0deg); }
-      10% { transform: translate(-1px, 1px) rotate(-1deg); }
-      20% { transform: translate(-2px, -1px) rotate(1deg); }
-      30% { transform: translate(1px, 2px) rotate(0deg); }
-      40% { transform: translate(2px, 1px) rotate(1deg); }
-      50% { transform: translate(-1px, -1px) rotate(-1deg); }
-      60% { transform: translate(-2px, 2px) rotate(0deg); }
-      70% { transform: translate(2px, -1px) rotate(1deg); }
-      80% { transform: translate(1px, 1px) rotate(-1deg); }
-      90% { transform: translate(-1px, 2px) rotate(0deg); }
-      100% { transform: translate(0px, 0px) rotate(0deg); }
-    }
-
-    .shake-text {
-      display: inline-block;
-      position: relative;
-      animation: text-shake 0.4s infinite;
-    }
-
-  </style>
+</style>
+<head>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in progress</title>
 </head>
 <body>
-  <div class="window active">
-    <div class="title-bar">
-      <div class="title-bar-text">🩸 system.jaen_gaming/root/terminal</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" onclick="window.history.back()"></button>
-      </div>
-    </div>
-    <div class="window-body">
-      <img src="PfP.png" alt="Profilbild" class="pfp" />
-      <h1>✖ You are not supposed to be here ✖</h1>
-      <div style="text-align: center">
-        <p class="shake-text">Leave while you still can</p>
-      </div>
-        <div class="links">
-        <button class="btn" onclick="openLink(this)" data-url="/linktree">🌐 Linktree</button>
-        <button class="btn" onclick="openLink(this)" data-url="/scary">...</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openLink(btn) {
-      window.location.href = btn.dataset.url;
-    }
-  </script>
+    <button onclick="switchTheme()" class="chants"></button>
+    <h1>Work in progress</h1>
+    <img src="worka1.gif" alt="GIF Image" width="200" height="200">
+    <img src="worka2.gif" alt="GIF Image" width="200" height="200">
+    <img src="worka3.gif" alt="GIF Image" width="200" height="200">
 </body>
+<script>
+    let isDark = false;
+
+    setInterval(() => {
+        // get random character from ascii
+        const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:',.<>?`~";
+        const wadafaq = Array.from({length: 10}, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+        document.querySelector('.chants').innerText = wadafaq;
+    }, 30);
+
+    // Check if the user has a preference for dark mode
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    if (darkModeMediaQuery.matches) {
+        isDark = true;
+        document.body.classList.add('dark');
+    }
+
+    function switchTheme() {
+        isDark = !isDark;
+        if (isDark) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    }
+</script>
 </html>
