@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JANIFY</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        html {
+            background-image: none !important;
+            background-color: rgb(3, 21, 0) !important;
+        }
+
+        @keyframes bounce {
+          0% {
+            transform: scale(1.1);
+          }
+          25% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.1);
+          }
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#542700">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg font-minecraft-ten font-bigger bg-black navbar-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=".">
+            <img src="../assets/img/dagallery/janify.gif" alt="REAL JANTUVE" height="150" class="sus-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-items-rotation">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href=".">
+                    Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="..">
+                    SUSSYJAN GQ
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+      <div class="container text-white">
+        <a class="btn btn-success font-minecraft-ten fs-5" data-bs-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="sidebar">
+          <i class="bi bi-layout-sidebar"></i> SIDEBAR
+        </a>
+        <br><br>
+        <div class="row">
+            <div class="col-auto collapse collapse-horizontal" id="sidebar">
+                <h5 class="font-minecraft-ten"><i class="bi bi-music-note-beamed"></i> MUSIC</h5>
+                <div class="music-container" style="width: 250px;">
+                    <img src="../assets/img/musicman/cover/wat.jpeg" height="250" width="250" alt="Coverart" class="music-cover">
+                    <br><br>
+                    <h3 class="music-title">(play something)</h3>
+                    <span class="music-componist">Click on a song to play</span>
+                </div>
+                <audio src="" class="janify-player" controls autoplay loop onpause="playerPause()" onplay="playerPlay()" onratechange="speedChange()"></audio>
+                <hr>
+                <h5 class="font-minecraft-ten"><i class="bi bi-question"></i> WHAT IS DIS</h5>
+                <div style="width: 250px;">
+                  Music. Meme music. Jan fuckin annoys me with his wierd taste of music on spotify and forces me to play it. soo heres janify, a collection of them all + all of the music used for this website
+                </div>
+            </div>
+            <div class="col">
+                <h1 class="font-minecraft-ten"><i class="bi bi-music-note-beamed"></i> MUSIC</h1>
+                <p class="fs-5">"there exist a song on spotify, ..." - jan 2022</p>
+                <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-4 row-cols-xl-5 gy-4 janify-music">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="../assets/img/musicman/cover/gulie.jpeg" alt="Gulie's theme">
+                            <div class="card-body">
+                              <h5 class="card-title">Gulie's theme</h5>
+                              <p class="card-text">SonicMaster5000</p>
+                              <a onclick="play('gulie')" class="btn btn-success">listen</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/howard.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Howard The Alien (1min Version)</h5>
+                            <p class="card-text">MAK</p>
+                            <a onclick="play('howard')" class="btn btn-success">listen</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/wiishop.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Wii Shop Channel</h5>
+                            <p class="card-text">Nintendo</p>
+                            <a onclick="play('wiishop')" class="btn btn-success">listen</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/holdup.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">hold up ring ding ding (meme) [sheeesh] (feat. curlydaddy101)</h5>
+                            <p class="card-text">Mister Ethan, curlydaddy101</p>
+                            <a onclick="play('holdup')" class="btn btn-success">listen</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/verbalase.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Verbalase NO NO NO NO</h5>
+                            <p class="card-text">Funni guy</p>
+                            <a onclick="play('verbalase')" class="btn btn-success">listen</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/balls.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Can I put my balls in yo jaws</h5>
+                            <p class="card-text">Jan. real</p>
+                            <a onclick="play('balls')" class="btn btn-success">listen</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/betty.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Betty det money</h5>
+                            <p class="card-text">Yung gravy boi</p>
+                            <a onclick="play('betty')" class="btn btn-success">listen</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/cbat.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Cbat</h5>
+                            <p class="card-text">Hudson Mohawke</p>
+                            <a onclick="play('cbat')" class="btn btn-success">listen</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                          <img class="card-img-top" src="../assets/img/musicman/cover/wacar.jpeg" alt="Gulie's theme">
+                          <div class="card-body">
+                            <h5 class="card-title">Whatsapp car</h5>
+                            <p class="card-text">John Xina</p>
+                            <a onclick="play('wacar')" class="btn btn-success">listen</a>
+                          </div>
+                      </div>
+                    </div>
+                        <div class="col">
+                          <div class="card h-100">
+                              <img class="card-img-top" src="../assets/img/musicman/cover/howerd.jpeg" alt="Gulie's theme">
+                              <div class="card-body">
+                                <h5 class="card-title">Imagine</h5>
+                                <p class="card-text">Jan himself</p>
+                                <a onclick="play('imagine')" class="btn btn-success">listen</a>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <small>more coming soon<br>gimme ideas</small><br>
+        <script>
+          // JANIFY CODUS REAL          
+          // ur mom -Jan Its now my code :)
+          const track_data = {
+            "howard": {
+              "title": "Howard The Alien (1min Version)",
+              "componist": "MAK",
+              "bpm": 82
+            },
+            "gulie": {
+              "title": "Gulie's Theme",
+              "componist": "SonicMaster5000",
+              "bpm": 125
+            },
+            "wiishop": {
+              "title": "Wii Shop Channel",
+              "componist": "Nintendo",
+              "bpm": 148
+            },
+            "holdup": {
+              "title": "hold up ring ding ding (meme) [sheeesh] (feat. curlydaddy101)",
+              "componist": "Mister Ethan, curlydaddy101",
+              "bpm": 104
+            },
+            "verbalase": {
+              "title": "Verbalase NO NO NO NO",
+              "componist": "Funni guy",
+              "bpm": 80
+            },
+            "balls": {
+              "title": "Can I put my balls in yo jaws",
+              "componist": "Jan. real",
+              "bpm": 160
+            },
+            "betty": {
+              "title": "Betty det money",
+              "componist": "Yung gravy boi",
+              "bpm": 102
+            },
+            "cbat": {
+              "title": "Cbat",
+              "componist": "Hudson Mohawke",
+              "bpm": 160
+            },
+            "wacar": {
+              "title": "Whatsapp car",
+              "componist": "John Xina",
+              "bpm": 117
+            },
+            "imagine": {
+              "title": "Imagine",
+              "componist": "Jan",
+              "bpm": 130
+            }
+          }
+
+          function play(name) {
+            const title = document.querySelector(".music-title");
+            const componist = document.querySelector(".music-componist");
+            const cover = document.querySelector(".music-cover");
+            const player = document.querySelector(".janify-player");
+
+            const meta = track_data[name];
+            const delayTime = 60000 / meta.bpm; // in ms
+
+            title.innerHTML = meta.title;
+            componist.innerHTML = meta.componist;
+            player.setAttribute("src", "../assets/audio/musicman/" + name + ".mp3");
+            cover.setAttribute("src", "../assets/img/musicman/cover/" + name  + ".jpeg");
+            cover.setAttribute("style", "animation: bounce 0ms infinite;");
+            cover.style.animationDuration = (60000 / meta.bpm) / player.playbackRate + "ms";
+          }
+
+          function playerPause() {
+            const cover = document.querySelector(".music-cover");
+            cover.style.animationIterationCount = "1";
+          }
+
+          function playerPlay() {
+            const cover = document.querySelector(".music-cover");
+            cover.style.animationIterationCount = "infinite";
+          }
+
+          function speedChange() {
+            const player = document.querySelector(".janify-player");
+            const cover = document.querySelector(".music-cover");
+            const name = player.src.split("/")[7].replace(".mp3", "");
+            const meta = track_data[name];
+            cover.style.animationDuration = (60000 / meta.bpm) / player.playbackRate + "ms"; // math
+          }
+        </script>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
